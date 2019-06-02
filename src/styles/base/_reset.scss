@@ -1,0 +1,10 @@
+@import '../lib/variables';
+
+html,
+body {
+    height: 100%;
+    margin:0;
+    overflow: auto;
+    background: $background;
+    color: #2b2024;
+}
