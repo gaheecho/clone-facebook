@@ -1,0 +1,8 @@
+@import "../../styles/utils.scss";
+.timeline-view {
+    margin-left: 12rem;
+
+    @media(min-width:$w-xlarge) {
+        margin-right: 12rem;
+    }
+}

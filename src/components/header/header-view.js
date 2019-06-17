@@ -3,17 +3,16 @@ import './header.scss';
 
 const HeaderView = (props) => (
     <header className="header">
-        <div>logo</div>
-        <input type="text"/>
-        <button>User</button>
-        <button>Home</button>
-        <button>Find Friends</button>
-        <button>create</button>
+        <div className="logo"></div>
+        <div className="search-input">
+            <input type="text" placeholder="Search"/>
+        </div>
+        <a href="/#">My Page</a>
+        <a href="/#">Home</a>
+        <a href="/#">create</a>
         <button>Friends Requests</button>
-        <button>Message Requests</button>
+        <button>Message</button>
         <button>Notifications</button>
-        <button>Quick Help</button>
-        <button>More</button>
     </header>
 )
 

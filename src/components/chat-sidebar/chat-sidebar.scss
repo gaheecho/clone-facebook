@@ -1,0 +1,15 @@
+@import "../../styles/utils.scss";
+
+.chat-sidebar-view {
+    position: fixed;
+    overflow: auto;
+    right: 0;
+    height: 100%;
+    top: 45px;
+    width: 230px;
+    border-left: 1px solid #ccc;
+
+    @media(max-width:$w-xlarge) {
+        transform: translate(100%);
+    }
+}

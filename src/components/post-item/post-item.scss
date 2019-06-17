@@ -1,0 +1,51 @@
+.post-item-view {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 530px;
+    margin: 10px;
+    padding: 10px;
+    .post-info {
+        .profile-img {
+            display: inline-block;
+            overflow: hidden;
+            max-width: 37px;
+            max-height: 37px;
+            border-radius: 50%;
+            margin-right: 5px;
+            .image{
+                width: 37px;
+            }
+        }
+        .bind-area {
+            display: inline-block;
+            vertical-align: top;
+            width: 87%;
+            .profile-name {
+                color: #4267b2;
+                font-weight: 500;
+                font-size: 15px;
+            }
+            .post-time {
+                color: #4c4949;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+       
+        .more {
+            display: inline-block;
+            font-size: 20px;
+            vertical-align: top;
+            &:before {
+                content: "・・・"
+            }
+        }
+        
+    }
+    .post-content {
+        .post-message {
+            font-size: 13px;
+        }
+    }
+}
