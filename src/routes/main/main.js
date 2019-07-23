@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from 'components/header';
 import Navigation from 'components/navigation';
-import Timeline from 'components/timeline';
+import Timeline from 'containers/timeline';
 import ChatSidebar from 'components/chat-sidebar';
 import './main.scss';
 

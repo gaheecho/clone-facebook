@@ -1,7 +1,30 @@
 .navigation-view {
     position: fixed;
+    margin-left: 100px;
     height: 100%;
     left: 0;
     top: 45px;
     width: 230px;
+    padding: 20px;
+    .user-info {
+        .profile-img {
+            display: inline-block;
+            overflow: hidden;
+            max-width: 20px;
+            max-height: 20px;
+            border-radius: 50%;
+            margin-right: 5px;
+            vertical-align: middle;
+            .image {
+                width: 20px;
+            }
+        }
+        .name {
+            display: inline-block;
+            font-size: 13px;
+            margin-left: 5px;
+            font-weight: 500;
+            color: #4f5052;
+        }
+    }
 }
