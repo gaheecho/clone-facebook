@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './post-item.scss';
+import CommentItem from '../comment-item';
+import CommentInput from '../comment-input';
 
-const PostItemView = ({postItem}) => (
+const PostItemView = ({postItem}) => {
+    const [isAllViewComments, setIsAllViewComments] = useState(false);
+
+    const onClickComment = () => {
+        
+    };
+
+    const onClickAllViewComments = () => {
+        setIsAllViewComments(!isAllViewComments);
+    }
+    return (
     <div className="post-item-view">
         <div className="post-info">
             <div className="profile-img">
@@ -24,11 +36,32 @@ const PostItemView = ({postItem}) => (
         <div className="bottom-content">
             <div className="buttons">
                 <span>Like</span>
-                <span>Comment</span>
+                <span onClick={onClickComment}>Comment</span>
             </div>
-            
+        </div>
+        <div className="comment-content">
+            <CommentInput />
+            {   
+                isAllViewComments ? 
+                [...Array(5).keys()].map(_=> {
+                    return <CommentItem />;
+                })
+                :
+                [...Array(2).keys()].map(_=> {
+                    return <CommentItem />;
+                })
+            }
+        </div>
+        <div className="view-comment" onClick={onClickAllViewComments}>
+            {
+                isAllViewComments ?
+                <a>Hide some commens</a>
+                :
+                <a>View more comments</a>
+            }
         </div>
     </div>
 )
+}
 
 export default PostItemView;

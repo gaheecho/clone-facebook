@@ -1,0 +1,31 @@
+.comment-input-view {
+    .profile-image {
+        display: inline-block;
+        overflow: hidden;
+        max-width: 33px;
+        max-height: 33px;
+        border-radius: 50%;
+        vertical-align: middle;
+        .image {
+            width: 33px;
+        }
+    }
+    .comment-input {
+        display: inline-block;
+        line-height: 33px;
+        margin-left: 10px;
+        width: 90%;
+        input[type=text] {
+            background-color: #f2f3f5;
+            border-radius: 18px;
+            box-sizing: border-box;
+            height: 33px;
+            border: #d0d4d8 solid 1px;
+            width: 100%;
+            font-size: 13px;
+        }
+        input:focus {
+            outline: none;
+        }
+    }
+}

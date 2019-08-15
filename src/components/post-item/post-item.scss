@@ -50,8 +50,11 @@
         }
     }
     .bottom-content {
+        border-top: #e0e1e2 solid 1px;
+        border-bottom: #e0e1e2 solid 1px;
         .buttons {
             display: flex;
+            padding: 5px 0 5px 0;
             span {
                 width: 100%;
                 font-weight: 500;
@@ -60,6 +63,17 @@
                 text-align: center;
             }
         }
-        
+    }
+    .comment-content {
+        margin-top: 15px;
+    }
+    .view-comment {
+        height: 20px;
+        font-size: 13px;
+        margin-top: 5px;
+        a {
+            height: 20px;
+            line-height: 20px;
+        }
     }
 }
