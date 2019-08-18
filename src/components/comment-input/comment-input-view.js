@@ -11,7 +11,6 @@ const CommentInput = () => (
                 type="text"
                 placeholder="Write a comment..."
             >
-
             </input>
         </div>
     </div>

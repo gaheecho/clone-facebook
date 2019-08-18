@@ -1,16 +1,18 @@
 import React from 'react';
 import './comment-item.scss';
 
-const CommentItem = ({commentItem}) => (
+const CommentItem = ({commentItem}) => {
+    console.log(commentItem);
+    return (
     <div className="comment-item-view">
         <div className="comment-item">
             <div className="profile-image">
-                <img className="image" src={'https://vignette.wikia.nocookie.net/love-simon/images/d/d2/LeahBurke1.png/revision/latest?cb=20180510201555'} alt=""></img>
+                <img className="image" src={commentItem.users.profile_image} alt=""></img>
             </div>
             
             <div className="comment-content">
-            <span className="user-name">Katherine Langford</span>
-            <span className="comment-text">wow this is test..</span>
+            <span className="user-name">{commentItem.users.first_name} {commentItem.users.last_name}</span>
+            <span className="comment-text">{commentItem.content}</span>
             </div>
         </div>
         <div className="buttons">
@@ -18,6 +20,7 @@ const CommentItem = ({commentItem}) => (
             <span className="button">Reply</span>
         </div>
     </div>
-)
+    )
+}
 
 export default CommentItem;

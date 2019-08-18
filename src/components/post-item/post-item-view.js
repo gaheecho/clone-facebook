@@ -47,17 +47,20 @@ const PostItemView = ({postItem}) => {
                     return <CommentItem />;
                 })
                 :
-                [...Array(2).keys()].map(_=> {
-                    return <CommentItem />;
-                })
+                postItem.comments.map(commentItem => (
+                    <CommentItem
+                        commentItem={commentItem}
+                    />
+                ))
+                
             }
         </div>
         <div className="view-comment" onClick={onClickAllViewComments}>
             {
-                isAllViewComments ?
+                postItem.comments.length > 0 && isAllViewComments ?
                 <a>Hide some commens</a>
                 :
-                <a>View more comments</a>
+                (postItem.comments.length === 0 ? null : <a>View more comments</a>)
             }
         </div>
     </div>
