@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from 'components/header';
 import Navigation from 'components/navigation';
-import Timeline from 'containers/timeline';
+import TimelineConainer from 'containers/timeline';
 import ChatSidebar from 'components/chat-sidebar';
 import './main.scss';
 
@@ -10,7 +10,7 @@ class Main extends Component {
     return <div className="main-view">
         <Header/>
         <Navigation/>
-        <Timeline/>
+        <TimelineConainer/>
         <ChatSidebar/>
     </div>;
   }

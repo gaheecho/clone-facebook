@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PostList from 'components/post-list';
 import axios from 'axios';
 
-const Timeline = () => {
+const TimelineConainer = () => {
     const LIMIT = 10;
     const [rowCount, setRowCount] = useState(0);
     const [postList, setPostList] = useState([]);
@@ -19,8 +19,6 @@ const Timeline = () => {
     }, []);
 
     useEffect(() => {
-        console.log('---- * useEffect * ----');
-        console.log(isFetching, offset, postList.length, rowCount);
         if(isFetching && (rowCount < 1 || postList.length < rowCount)) {
             requestPostList();
         }
@@ -30,8 +28,6 @@ const Timeline = () => {
     }, [isFetching, offset, postList, rowCount]);
 
     const onScroll = () => {
-        console.log('---- * onScroll * ----');
-        console.log(isFetching, offset, postList.length, rowCount)
         const getScrollBottom = () => document.body.scrollHeight - document.body.clientHeight === document.body.scrollTop;
         if(getScrollBottom()) {
             setIsFetching(true);
@@ -61,4 +57,4 @@ const Timeline = () => {
     )
 }
 
-export default Timeline;
+export default TimelineConainer;

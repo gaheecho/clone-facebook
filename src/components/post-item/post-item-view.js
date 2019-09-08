@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './post-item.scss';
 import CommentItem from '../comment-item';
 import CommentInput from '../comment-input';
+import CommentListContainer from '../../containers/comment-list';
 
 const PostItemView = ({postItem}) => {
     const [isAllViewComments, setIsAllViewComments] = useState(false);
@@ -42,13 +43,12 @@ const PostItemView = ({postItem}) => {
         <div className="comment-content">
             <CommentInput />
             {   
-                isAllViewComments ? 
-                [...Array(5).keys()].map(_=> {
-                    return <CommentItem />;
-                })
+                isAllViewComments ?
+                <CommentListContainer postNo={postItem.post_no}/>
                 :
                 postItem.comments.map(commentItem => (
                     <CommentItem
+                        key={`comment-${commentItem.post_no}-${commentItem.comment_no}-${commentItem.user_no}`}
                         commentItem={commentItem}
                     />
                 ))
